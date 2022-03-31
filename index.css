@@ -1,5 +1,5 @@
 :root {
-    --white: #ffffff;
+    --light: #ffffff;
     --dark: #1a1818;
     --gray: lightgray;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -11,22 +11,20 @@ body {
 
 .topbar {
     display: flex;
-    height: 2rem;
     align-items: center;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .title-nav {
     flex-grow: 0.5;
 }
 
-div.front {
+.front {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    position: relative;
     min-height: 75vh;
     padding: 2rem;
     padding-top: 0;
@@ -36,40 +34,36 @@ div.front {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: .5em;
-    box-shadow: .5em .5em var(--dark);
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem var(--dark);
 }
 
-.front-text {
-    width: fit-content;
-}
-
-div.how-it-works {
+.how-it-works {
     display: flex;
-    align-items: center;
     flex-flow: column;
+    align-items: center;
     justify-content: space-evenly;
     margin: auto;
-    padding: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     background-color: var(--dark);
 }
 
-h3.how-it-works {
-    text-align: center;
-    color: var(--white);
+.how-it-works>* {
+    color: var(--light);
 }
 
-div.steps {
+.steps {
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 1rem;
     width: 60%;
     margin: auto;
 }
 
-div.step {
+.step {
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -84,65 +78,62 @@ div.step {
 
 .step-text {
     width: 10rem;
-    word-wrap: normal;
-    color: var(--white);
 }
 
-div.reviews {
+.reviews {
     display: block;
     margin: auto;
-    width: 80%;
-    padding: 2rem;
+    width: 75%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 
-h3.reviews {
+.reviews-heading {
     text-align: center;
 }
 
-div.review {
+.review {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
     min-height: 20rem;
-    background-color: var(--gray);
     padding: .5rem;
-    border-radius: .5em;
-    box-shadow: .5em .5em var(--dark);
+    border-radius: .5rem;
+    box-shadow: .5rem .5rem var(--dark);
+    background-color: var(--gray);
 }
 
-p.review {
+.review-description {
     text-align: center;
     font-size: larger;
 }
 
-p.review-name {
+.review-name {
     text-align: center;
 }
 
-div.bottom {
+.bottom {
     display: block;
     position: relative;
+    padding: 1rem;
+    min-height: 5rem;
     background-color: var(--dark);
-    padding: 1em;
-    min-height: 5em;
+}
+
+.bottom>* {
+    color: var(--light);
 }
 
 .bottom-nav {
     display: flex;
-    gap: 1em;
+    gap: 1rem;
     flex-wrap: wrap;
 }
 
-.bottom-nav>* {
-    color: var(--white);
-    margin: 0;
-}
-
-p.copyright {
+.copyright-text {
     position: absolute;
     left: 50%;
-    bottom: 1em;
+    bottom: 1rem;
     transform: translateX(-50%);
-    color: var(--white);
 }
