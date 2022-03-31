@@ -1,7 +1,8 @@
 :root {
     --white: #ffffff;
-    --black: #1a1818;
+    --dark: #1a1818;
     --gray: lightgray;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     height: 2rem;
     align-items: center;
     justify-content: space-around;
-    padding: 1%;
+    padding: 1rem;
 }
 
 .title-nav {
@@ -21,23 +22,26 @@ body {
 }
 
 div.front {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
     position: relative;
-    height: 25rem;
-    padding: 2%;
+    min-height: 75vh;
+    padding: 2rem;
+    padding-top: 0;
 }
 
-img.front {
-    position: absolute;
-    margin: auto;
-    width: 40%;
-    height: 25rem;
-    left: 3%;
+.front-image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5em;
+    box-shadow: .5em .5em var(--dark);
 }
 
-h1.front {
-    position: absolute;
-    top: 40%;
-    right: 3%;
+.front-text {
+    width: fit-content;
 }
 
 div.how-it-works {
@@ -46,21 +50,22 @@ div.how-it-works {
     flex-flow: column;
     justify-content: space-evenly;
     margin: auto;
-    padding: 1%;
-    height: 20rem;
-    border-top-style: solid;
-    border-bottom-style: solid;
+    padding: 1rem;
+    background-color: var(--dark);
 }
 
 h3.how-it-works {
     text-align: center;
+    color: var(--white);
 }
 
 div.steps {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
-    width: 50rem;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: 60%;
     margin: auto;
 }
 
@@ -70,22 +75,24 @@ div.step {
     align-items: center;
 }
 
-img.step {
-    width: 5rem;
-    height: 5rem;
+.step-image {
+    width: 8rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: .5rem;
 }
 
-p.step {
+.step-text {
     width: 10rem;
     word-wrap: normal;
+    color: var(--white);
 }
 
 div.reviews {
     display: block;
     margin: auto;
-    width: 70rem;
-    height: 20rem;
-    padding: 3%;
+    width: 80%;
+    padding: 2rem;
 }
 
 h3.reviews {
@@ -97,8 +104,11 @@ div.review {
     justify-content: center;
     align-items: center;
     flex-flow: column;
-    height: 20rem;
+    min-height: 20rem;
     background-color: var(--gray);
+    padding: .5rem;
+    border-radius: .5em;
+    box-shadow: .5em .5em var(--dark);
 }
 
 p.review {
@@ -113,19 +123,26 @@ p.review-name {
 div.bottom {
     display: block;
     position: relative;
-    background-color: var(--black);
-    height: 15rem;
+    background-color: var(--dark);
+    padding: 1em;
+    min-height: 5em;
 }
 
-p.bottom {
+.bottom-nav {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.bottom-nav>* {
     color: var(--white);
-    margin: 0%;
+    margin: 0;
 }
 
 p.copyright {
     position: absolute;
-    text-align: center;
-    bottom: 2%;
-    left: 45%;
+    left: 50%;
+    bottom: 1em;
+    transform: translateX(-50%);
     color: var(--white);
 }
